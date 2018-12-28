@@ -27,7 +27,6 @@ body.thin::-webkit-scrollbar {
     border-radius: 10px;
     background: #2dc475;
 }
-
     ::-webkit-scrollbar-thumb:window-inactive {
         background: rgba(100,100,100,0.4);
     }
