@@ -11,7 +11,7 @@
 
 /*-----------------ScrollBar For Browser --------------------*/
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 body.thin::-webkit-scrollbar {
