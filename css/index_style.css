@@ -7,6 +7,30 @@
     right: 10px;
     display: none;
 }
+
+
+/*-----------------ScrollBar For Browser --------------------*/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body.thin::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #2dc475;
+}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(100,100,100,0.4);
+    }
 /*-----------------Navbar Section--------------------*/
 .coloor {
     background-color: #2dc475 !important;
