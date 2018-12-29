@@ -111,7 +111,7 @@ body.thin::-webkit-scrollbar {
         padding-top: 10px;
         font-size: 18px;
         font-weight: 400;
-        color: #b25538;
+        color: white;
     }
 
     .info ul {
@@ -124,8 +124,14 @@ body.thin::-webkit-scrollbar {
 .info1 {
     float: left;
     margin: 20px;
+     color: white;
 }
 
+
+.aboutUs{
+    background-color: #6EA644;
+    color: white;
+}
 
 
 /*-----------------SLider Section--------------------*/
@@ -278,3 +284,20 @@ body.thin::-webkit-scrollbar {
 .socials a:hover i.fab.fa-instagram {
     background-color: #3f729b;
 }
+
+
+
+/***************OurTeam*****************/
+
+.OurTeam{
+    text-align: center;
+    padding-top: 2%;
+    background-color: #5B8FAC;
+    color: white;
+}
+
+
+
+
+
+
