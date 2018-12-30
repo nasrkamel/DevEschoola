@@ -1,0 +1,30 @@
+/********** Setting the fonts section ***************/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.flexBackground{
+	position : fixed;
+	height : 80%;
+	width : 100%;
+	background-color : #000;
+	top : 0;
+	left : 0;
+	
+	background: url() no-repeat center center ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	
+}
+
+
+
+
+
+
+
+
+
+
