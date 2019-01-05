@@ -33,40 +33,66 @@
 			container = perspectiveWrapper.querySelector( '.MyNav' ),
 			contentWrapper = container.querySelector( '.wrapper' );
 
-		showMenu.addEventListener( clickevent, function( ev ) {
-			ev.stopPropagation();
-			ev.preventDefault();
-			docscroll = scrollY();
-			// change top of contentWrapper
-			contentWrapper.style.top = docscroll * -1 + 'px';
-			// mac chrome issue:
-			document.body.scrollTop = document.documentElement.scrollTop = 0;
-			// add modalview class
-			classie.add( perspectiveWrapper, 'modalview' );
-			// animate..
-			setTimeout( function() { classie.add( perspectiveWrapper, 'animate' ); }, 25 );
+        
+        showMenu.addEventListener(clickevent, function (ev) {
+            if (classie.has(perspectiveWrapper, 'animate')) {
+                var onEndTransFn = function (ev) {
+                    if (support && (ev.target.className !== 'MyNav' || ev.propertyName.indexOf('transform') == -1)) return;
+                    this.removeEventListener(transEndEventName, onEndTransFn);
+                    classie.remove(perspectiveWrapper, 'modalview');
+                    // mac chrome issue:
+                    document.body.scrollTop = document.documentElement.scrollTop = docscroll;
+                    // change top of contentWrapper
+                    contentWrapper.style.top = '0px';
+                };
+                if (support) {
+                    perspectiveWrapper.addEventListener(transEndEventName, onEndTransFn);
+                }
+                else {
+                    onEndTransFn.call();
+                }
+                classie.remove(perspectiveWrapper, 'animate');
+            }
+            else {
+                ev.stopPropagation();
+                ev.preventDefault();
+                docscroll = scrollY();
+                debugger
+                // change top of contentWrapper
+                contentWrapper.style.top = docscroll * -1 + 'px';
+                // mac chrome issue:
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                // add modalview class
+                classie.add(perspectiveWrapper, 'modalview');
+                // animate..
+
+                setTimeout(function () { classie.add(perspectiveWrapper, 'animate'); }, 25);
+            }
+
+            container.addEventListener(clickevent, function (ev) {
+                if (classie.has(perspectiveWrapper, 'animate')) {
+                    var onEndTransFn = function (ev) {
+                        if (support && (ev.target.className !== 'MyNav' || ev.propertyName.indexOf('transform') == -1)) return;
+                        this.removeEventListener(transEndEventName, onEndTransFn);
+                        classie.remove(perspectiveWrapper, 'modalview');
+                        // mac chrome issue:
+                        document.body.scrollTop = document.documentElement.scrollTop = docscroll;
+                        // change top of contentWrapper
+                        contentWrapper.style.top = '0px';
+                    };
+                    if (support) {
+                        perspectiveWrapper.addEventListener(transEndEventName, onEndTransFn);
+                    }
+                    else {
+                        onEndTransFn.call();
+                    }
+                    classie.remove(perspectiveWrapper, 'animate');
+                }
+            });
+			
 		});
 
-		container.addEventListener( clickevent, function( ev ) {
-			if( classie.has( perspectiveWrapper, 'animate') ) {
-				var onEndTransFn = function( ev ) {
-                    if (support && (ev.target.className !== 'MyNav' || ev.propertyName.indexOf( 'transform' ) == -1 ) ) return;
-					this.removeEventListener( transEndEventName, onEndTransFn );
-					classie.remove( perspectiveWrapper, 'modalview' );
-					// mac chrome issue:
-					document.body.scrollTop = document.documentElement.scrollTop = docscroll;
-					// change top of contentWrapper
-					contentWrapper.style.top = '0px';
-				};
-				if( support ) {
-					perspectiveWrapper.addEventListener( transEndEventName, onEndTransFn );
-				}
-				else {
-					onEndTransFn.call();
-				}
-				classie.remove( perspectiveWrapper, 'animate' );
-			}
-		});
+		
 
 		perspectiveWrapper.addEventListener( clickevent, function( ev ) { return false; } );
 	}
