@@ -1,17 +1,17 @@
-$("a").click(function(){
+//$("a").click(function(){
 	
-	 var x= $(this).attr("href");
+//	 var x= $(this).attr("href");
 	
-	var myoffset = $(x).offset().top;
+//	var myoffset = $(x).offset().top;
 	
-	$("body").animate({scrollTop:myoffset},500)
-	
-	
+//	$("body").animate({scrollTop:myoffset},500)
 	
 	
 	
 	
-})
+	
+	
+//})
 
 
  
