@@ -12,7 +12,7 @@
     display: none;
     width: 40px;
     height: 40px;
-    background-color: #5FAE79;
+    background-color: #63AAC0;
     border-radius:   30px;
      border: 1px solid green ;
     cursor: pointer;
@@ -64,7 +64,7 @@ body.thin::-webkit-scrollbar {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #2dc475;
+    background: #63AAC0;
 }
     ::-webkit-scrollbar-thumb:window-inactive {
         background: rgba(100,100,100,0.4);
@@ -130,7 +130,7 @@ body.thin::-webkit-scrollbar {
      margin-top: 50px !important;
     margin-left: 5% !important;
     text-align: left!important;
-    font-family: fantasy;
+    
 }
 
 .logo{
@@ -196,7 +196,7 @@ body.thin::-webkit-scrollbar {
 
 
 .aboutUs{
-    background-color: #3FBDA4;
+    background-color: #63AAC0;
     color: white;
 }
 
@@ -223,18 +223,19 @@ body.thin::-webkit-scrollbar {
         width: 507px;
     }
     
-    .Slider .Slider_text {
+    .Slider .Slider_text  {
         
-        color: black;
+        color: #63AAC0;
         text-align: left;
       
-        font-style: oblique;
+        
     }
 
 
     .Slider .Slider_text h1 {
      
         font-size:60px;
+        color: #63AAC0;
     }
         .Slider .Slider_text p {
             font-size: 30px;
@@ -244,9 +245,17 @@ body.thin::-webkit-scrollbar {
             height:100vh;
         }
 
+.carousel-indicators .active {
+    background-color: #63AAC0;
+}
+
+
+
+
 @media screen and (max-width: 600px) {
     .carousel-item img{
         height:300px !important;
+        
     }
 
 }
@@ -312,7 +321,7 @@ body.thin::-webkit-scrollbar {
 
 .team-details span {
     font-size: 13px;
-    font-family: "Roboto", Arial, sans-serif;
+    
     color: #9e9e9e;
 }
 
@@ -391,7 +400,7 @@ margin-left:5px;
 
 h1{
   font-size: 2.5rem;
-  font-family: 'Montserrat';
+  
   font-weight: normal;
   color: #444;
   text-align: center;
@@ -448,10 +457,10 @@ h1{
 }
 
 .back{
-  background: #6EA644;
-  background: -webkit-linear-gradient(45deg,  #6EA644 0%,#596a72 100%);
-  background: -o-linear-gradient(45deg,  #6EA644 0%,#596a72 100%);
-  background: linear-gradient(45deg,  #6EA644 0%,#596a72 100%);
+  background: #63AAC0;
+  background: -webkit-linear-gradient(45deg,  #63AAC0 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #63AAC0 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #63AAC0 0%,#596a72 100%);
 }
 
 .front:after{
