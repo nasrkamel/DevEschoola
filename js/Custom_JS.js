@@ -1,17 +1,17 @@
-$("a").click(function(){
-	
-	 var x= $(this).attr("href");
-	
-	var myoffset = $(x).offset().top;
-	
-	$("body").animate({scrollTop:myoffset},500)
-	
-	
-	
-	
-	
-	
-})
+let $ = require('jquery');
+require('popper.js');
+require('bootstrap');
+require('skitter-slider');
 
 
- 
+$("body").addClass("thin");
+// If user has Javascript disabled, the thick scrollbar is shown
+$("body").mouseover(function () {
+		$(this).removeClass("thin");
+});
+$("body").mouseout(function () {
+		$(this).addClass("thin");
+});
+$("body").scroll(function () {
+		$("body").addClass("thin");
+});

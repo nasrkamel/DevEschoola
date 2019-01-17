@@ -42,7 +42,7 @@ tl.from(bgd, 0.2, {opacity:0, scale:0, transformOrigin: 'center center'})
 
 
 $('#btnUp').click(function(){
-    
+
  $("HTML, BODY").animate({ scrollTop: 0 },200);
 
 
